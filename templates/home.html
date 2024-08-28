@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <link href="{{ url_for('static', path='/main.css') }}" rel="stylesheet">
+        <title>Profile</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="profilecard">
+                <div class="infoimages">
+                    <img src="https://images.unsplash.com/photo-1619995745882-f4128ac82ad6?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                    <img src="{{user.avatar_url}}">
+                </div>
+                <div class="profileinfo">
+                    <span>{{user.name}}</span>
+                </div>
+                <hr>
+                <div class="followerinfo">
+                    <div class="following">
+                        <span>{{user.following}}</span>
+                        <span>Following</span>
+                    </div>
+                    <div class="vl"></div>
+                    <div class="follower">
+                        <span>{{user.followers}}</span>
+                        <span>Followers</span>
+                    </div>
+                    <div class="vl"></div>
+                    <div class="post">
+                        <span>{{user.public_repos}}</span>
+                        <span>Public Repo</span>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="logout-button">
+                <button class="logout" onclick="logout()">logout</button>
+            </div>
+        </div>
+    </body>
+    <script>
+        function logout(){
+            window.location.href = "{{logout}}"
+        }
+    </script>
+</html>
