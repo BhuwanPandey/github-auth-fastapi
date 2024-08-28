@@ -1,4 +1,4 @@
-# Github Authentication with Python/Fastpai
+# Github Authentication with Python/Fastapi
 
 This is a simple fastapi project that allow user to authenticate to application with the help of github account.
 
