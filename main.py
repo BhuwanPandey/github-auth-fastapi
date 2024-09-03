@@ -52,7 +52,7 @@ async def read_item(request: Request):
     )
 
 
-@app.get('/api/v1/integrations/github/callback')
+@app.get('/callback')
 def callback(req: Request):
     session = req.session
     token = session.get("access_token", None)
